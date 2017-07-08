@@ -8,6 +8,9 @@ print(response)
 
 cot = client:incr('lua:redis');
 print(cot);
+
+cot = client:hincrby('lua:hash','key',1);
+print(cot);
   
 --for i=100,105 do  
 --   client:zadd("test1",i,i)  
